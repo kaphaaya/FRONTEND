@@ -1,0 +1,11 @@
+Part 2: Research and Reflection
+
+The websites and web applications I use regularly include Gmail, Notion, my banking app, Twitter/X, and my own business website, brownsdigitalconsult.com, which I built for my consulting brand, Browns Digital Consult (BDC).
+
+I chose my own site as my example of good design since I know it inside and out. What makes it effective from a user's perspective is how clearly it communicates what BDC does within the first few seconds of landing on the page. The homepage leads straight into a clear statement of what we do, done for you operational transformation, followed by real case studies with actual numbers attached, like a client who recovered 420,000 naira a month after we deployed a system for them. 
+
+That specificity builds trust immediately instead of relying on vague marketing language. The site also breaks services into clear tiers with pricing ranges, so a visitor never has to guess what something costs or what they get. Little things like the cookie consent banner, the newsletter signup, and consistent navigation across pages also show attention to detail that makes the whole experience feel trustworthy and professional.
+
+By the end of this cohort, I am not entirely sure yet what specific project I want to build, and I am okay with that. I want to stay open and let my interests guide me as I learn, rather than forcing a direction too early.
+Honestly, I am excited about everything in frontend development. I love research and picking up new skills, so I am looking forward to all of it, HTML, CSS, JavaScript, all of it. If I am nervous about anything, it is keeping up with the pace of the cohort, since I am juggling this alongside other things I am currently studying. But I am used to learning multiple things at once, so I am confident I will find my rhythm.
+

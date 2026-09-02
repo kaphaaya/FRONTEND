@@ -1,0 +1,20 @@
+Part 3: Exploration Exercise
+
+I inspected three websites using Chrome DevTools by right clicking on the page and selecting Inspect. I spent about ten minutes on each one clicking through the elements panel.
+
+Site 1: brownsdigitalconsult.com
+
+What stood out immediately was how component based the structure felt, even though I was only looking at rendered HTML. Sections like the case studies and the pricing tiers were wrapped in repeating patterns of divs with similar class names, which told me the site was likely built using a modern framework rather than plain static HTML. I also noticed meta tags in the head section for things like Open Graph images and Twitter card data, which control how the page looks when shared on social media. Seeing my own site from this angle made me appreciate the work that goes on behind a page that looks simple on the surface.
+
+
+
+Site 2: Gmail
+
+This one was much harder to read through. The class names were short and machine generated rather than descriptive, which I now understand is common for large applications that go through a build process that compresses code for performance. I did notice a lot of nested divs and aria labels, which are used to help screen readers describe elements to visually impaired users, so accessibility was clearly considered even if the structure itself looked dense and complicated.
+
+
+
+Site 3: Notion
+
+What I found most interesting here was how the entire page seemed to be built from a small number of repeating block elements, which makes sense since Notion is designed around the idea of everything being a flexible block you can rearrange. I also came across contenteditable attributes on some elements, which is the trick that allows you to click anywhere on a Notion page and start typing directly into it.
+
