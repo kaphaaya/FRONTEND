@@ -1,9 +1,8 @@
-// ============================================
-// QUESTION 1: CREATE STUDENT OBJECTS
-// ============================================
+```javascript
+// Week 7 - Arrays and Objects Assignment
 
-// Created an array containing 5 student objects.
-// Each student has an id, name, age, and grades array.
+// QUESTION 1
+// Create an array of students
 const students = [
   {
     id: 1,
@@ -37,29 +36,18 @@ const students = [
   },
 ];
 
-console.log("========== QUESTION 1 ==========");
-console.log("Students:");
+console.log("QUESTION 1 - Students");
 console.log(students);
 
 
-// ============================================
-// QUESTION 2: CALCULATE AVERAGES
-// ============================================
-
-// Calculated the average of an array of grades.
-// reduce() is used to calculate the total.
-// toFixed(2) rounds the result to 2 decimal places.
-// Number() converts the result back to a number.
+// QUESTION 2
+// Calculate the average of the grades
 function calculateAverage(grades) {
   const total = grades.reduce((sum, grade) => sum + grade, 0);
-  const average = total / grades.length;
-
-  return Number(average.toFixed(2));
+  return Number((total / grades.length).toFixed(2));
 }
 
-// Use map() to create a new array.
-// The spread operator copies each student object,
-// so the original students array is not mutated.
+// Add the average to each student
 const studentsWithAverage = students.map((student) => {
   return {
     ...student,
@@ -67,48 +55,30 @@ const studentsWithAverage = students.map((student) => {
   };
 });
 
-console.log("========== QUESTION 2 ==========");
-console.log("Students with averages:");
+console.log("QUESTION 2 - Students with averages");
 console.log(studentsWithAverage);
 
 
-// ============================================
-// QUESTION 3: FILTER PASSING STUDENTS
-// ============================================
-
-// Return only students whose average is 60 or higher.
-// filter() creates a new array containing only
-// students that meet the condition.
+// QUESTION 3
+// Get students with an average of 60 or above
 function getPassingStudents(students) {
   return students.filter((student) => student.average >= 60);
 }
 
 const passing = getPassingStudents(studentsWithAverage);
 
-console.log("========== QUESTION 3 ==========");
-console.log("Passing students:");
+console.log("QUESTION 3 - Passing students");
 console.log(passing);
 
 
-// ============================================
-// QUESTION 4: FUNCTIONS & CALLBACKS
-// ============================================
-
-// processStudents accepts a students array and
-// a callback function.
-// map() applies the callback to every student.
+// QUESTION 4
+// Use a callback to process each student
 function processStudents(students, callback) {
   return students.map((student) => callback(student));
 }
 
 
-// --------------------------------------------
-// Callback 1: ADD LETTER GRADE
-// --------------------------------------------
-
-// Add a letter grade based on the student's average.
-// The spread operator ensures the original object
-// is not modified.
+// Add a letter grade based on the average
 function addLetterGrade(student) {
   let letterGrade;
 
@@ -126,82 +96,63 @@ function addLetterGrade(student) {
 
   return {
     ...student,
-    letterGrade: letterGrade,
+    letterGrade,
   };
 }
 
 
-// --------------------------------------------
-// Callback 2: ADD STATUS
-// --------------------------------------------
-
-// Add Pass if the average is 60 or higher.
-// Otherwise add Fail.
+// Add Pass or Fail status
 function addStatus(student) {
-  const status = student.average >= 60 ? "Pass" : "Fail";
-
   return {
     ...student,
-    status: status,
+    status: student.average >= 60 ? "Pass" : "Fail",
   };
 }
 
 
-// Process students using addLetterGrade callback.
+// Test the letter grade callback
 const studentsWithGrades = processStudents(
   studentsWithAverage,
   addLetterGrade
 );
 
-console.log("========== QUESTION 4A ==========");
-console.log("Students with letter grades:");
+console.log("QUESTION 4A - Letter grades");
 console.log(studentsWithGrades);
 
 
-// Process students using addStatus callback.
+// Test the status callback
 const studentsWithStatus = processStudents(
   studentsWithAverage,
   addStatus
 );
 
-console.log("========== QUESTION 4B ==========");
-console.log("Students with status:");
+console.log("QUESTION 4B - Student status");
 console.log(studentsWithStatus);
 
 
-// ============================================
-// ADDITIONAL TESTING
-// ============================================
+// TESTING
 
-console.log("========== TESTING ==========");
+console.log("TESTING");
 
-// Test calculateAverage directly.
-console.log(
-  "Average of [85, 92, 78]:",
-  calculateAverage([85, 92, 78])
-);
+console.log("Average test:", calculateAverage([85, 92, 78]));
 
-// Test number of students.
 console.log("Number of students:", students.length);
 
-// Test passing students.
-console.log(
-  "Number of passing students:",
-  passing.length
-);
+console.log("Number of passing students:", passing.length);
 
-// Verify the original students were not mutated.
+// Check that the original students were not changed
 console.log(
-  "Original student has average property:",
+  "Original student average:",
   students[0].average
 );
 
 console.log(
-  "Original student has letterGrade property:",
+  "Original student letter grade:",
   students[0].letterGrade
 );
 
 console.log(
-  "Original student has status property:",
+  "Original student status:",
   students[0].status
 );
+```
