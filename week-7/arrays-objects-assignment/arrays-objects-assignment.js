@@ -14,7 +14,9 @@ const students = [
     id: 2,
     name: "Brian Smith",
     age: 21,
-    grades: [72, 68, 75],
+    grades: [72, 68, 75],'
+
+    
   },
   {
     id: 3,
